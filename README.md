@@ -64,17 +64,19 @@ For Android 13+:
 Initialize
 
 TelegramBackupManager manager = new TelegramBackupManager(
-context,
-"YOUR_BOT_TOKEN",
-"YOUR_CHAT_ID"
+        context,
+        "YOUR_BOT_TOKEN",
+        "YOUR_CHAT_ID"
 );
+
+Start Backup
 
 manager.startBackup(new BackupCallback() {
     @Override
     public void onProgress(int progress) {
         Log.d("Backup", "Progress: " + progress + "%");
     }
-    
+
     @Override
     public void onSuccess() {
         Log.d("Backup", "Backup Completed");
@@ -102,6 +104,41 @@ manager.startBackup(new BackupCallback() {
 
 - Telegram file size limit (~50MB for bots)
 - Requires stable internet connection
+- Background execution may be restricted on some devices
+
+---
+
+🔐 Security Note
+
+- Never expose your Bot Token publicly
+- Use server-side proxy for better security (recommended)
+
+---
+
+🛠️ Future Improvements
+
+- 🔄 Resume upload support
+- 🗜️ Advanced compression
+- 📅 Scheduled backup
+- 🔒 End-to-end encryption
+
+---
+
+🤝 Contributing
+
+Pull requests are welcome! Feel free to open issues for suggestions or bugs.
+
+---
+
+📜 License
+
+MIT License © 2026 YOUR_NAME
+
+---
+
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
 - Background execution may be restricted on some devices
 
 ---
