@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0'
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+android {
+    namespace 'com.bshashi.gallerybackup'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+    }
+    
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                // components.release agar error de toh ye line sabse best hai:
+                from components.findByName('release')
+                
+                groupId = 'com.github.bshashiAi'
+                artifactId = 'gallery_loader'
+                version = '1.0'
+            }
+        }
+    }
+}
+
