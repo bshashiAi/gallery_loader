@@ -1,4 +1,4 @@
-# 📸 Telegram Gallery Backup Library (Android)
+content = """# 📸 Telegram Gallery Backup Library (Android)
 
 [![JitPack](https://jitpack.io/v/bshashiAi/gallery_loader.svg)](https://jitpack.io/#bshashiAi/gallery_loader)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -33,38 +33,3 @@ dependencyResolutionManagement {
         maven { url '[https://jitpack.io](https://jitpack.io)' }
     }
 }
-- Background execution may be restricted on some devices
-
----
-
-🔐 Security Note
-
-- Never expose your Bot Token publicly
-- Use server-side proxy for better security (recommended)
-
----
-
-🛠️ Future Improvements
-
-- 🔄 Resume upload support
-- 🗜️ Advanced compression
-- 📅 Scheduled backup
-- 🔒 End-to-end encryption
-
----
-
-🤝 Contributing
-
-Pull requests are welcome! Feel free to open issues for suggestions or bugs.
-
----
-
-📜 License
-
-MIT License © 2026 YOUR_NAME
-
----
-
-⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
