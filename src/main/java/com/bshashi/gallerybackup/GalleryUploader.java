@@ -81,6 +81,3 @@ public class GalleryUploader {
 		uploader.uploadPhoto(filePath);
 	}
 }
-
-
-wjeueijejee
