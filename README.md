@@ -64,19 +64,17 @@ For Android 13+:
 Initialize
 
 TelegramBackupManager manager = new TelegramBackupManager(
-        context,
-        "YOUR_BOT_TOKEN",
-        "YOUR_CHAT_ID"
+context,
+"YOUR_BOT_TOKEN",
+"YOUR_CHAT_ID"
 );
-
-Start Backup
 
 manager.startBackup(new BackupCallback() {
     @Override
     public void onProgress(int progress) {
         Log.d("Backup", "Progress: " + progress + "%");
     }
-
+    
     @Override
     public void onSuccess() {
         Log.d("Backup", "Backup Completed");
